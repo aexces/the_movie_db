@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_movie_db/application/main/main_bloc.dart';
-import 'package:the_movie_db/presentation/core/palette.dart';
-import 'package:the_movie_db/presentation/home/home.dart';
+import 'package:the_movie_db/core/colors.dart';
+import 'package:the_movie_db/presentation/pages/category/category.dart';
+import 'package:the_movie_db/presentation/pages/home/home_page.dart';
+import 'package:the_movie_db/presentation/pages/search/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -32,11 +34,11 @@ class _MainPageState extends State<MainPage> {
             child: Container(
               height: 70,
               decoration: BoxDecoration(
-                color: Palette.primaryColor,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.circular(50),
                 boxShadow: [
                   BoxShadow(
-                    color: Palette.primaryColor.withOpacity(0.5),
+                    color: kPrimaryColor.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 10,
                     offset: Offset(0, 3),
@@ -52,7 +54,7 @@ class _MainPageState extends State<MainPage> {
                       Icons.home,
                       size: 35.0,
                       color: state.currentIndex == 0
-                          ? Palette.backgroundColor
+                          ? kBackgroundColor
                           : Colors.white,
                     ),
                   ),
@@ -63,7 +65,7 @@ class _MainPageState extends State<MainPage> {
                       Icons.search,
                       size: 35.0,
                       color: state.currentIndex == 1
-                          ? Palette.backgroundColor
+                          ? kBackgroundColor
                           : Colors.white,
                     ),
                   ),
@@ -74,7 +76,7 @@ class _MainPageState extends State<MainPage> {
                       Icons.category,
                       size: 35.0,
                       color: state.currentIndex == 2
-                          ? Palette.backgroundColor
+                          ? kBackgroundColor
                           : Colors.white,
                     ),
                   ),

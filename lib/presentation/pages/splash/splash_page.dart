@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:the_movie_db/core/router/app_router.gr.dart';
-import 'package:the_movie_db/presentation/core/palette.dart';
+import 'package:the_movie_db/core/colors.dart';
+import 'package:the_movie_db/presentation/router/app_router.gr.dart';
 
 const kDuration = Duration(seconds: 3);
 const kWidth = SizedBox(width: 20);
@@ -63,8 +63,8 @@ class _SplashPageState extends State<SplashPage> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Palette.primaryColor,
-                Palette.backgroundColor,
+                kPrimaryColor,
+                kBackgroundColor,
               ],
               begin: FractionalOffset.centerLeft,
               end: FractionalOffset.centerRight,
@@ -72,7 +72,7 @@ class _SplashPageState extends State<SplashPage> {
             borderRadius: BorderRadius.circular(50),
             boxShadow: [
               BoxShadow(
-                color: Palette.primaryColor.withOpacity(0.5),
+                color: kPrimaryColor.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 4,
                 offset: Offset(-8, 0),
