@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:the_movie_db/core/colors.dart';
 import 'package:the_movie_db/presentation/router/app_router.gr.dart';
+import 'package:the_movie_db/presentation/widgets/thdb_heading.dart';
 
 const kDuration = Duration(seconds: 3);
 const kWidth = SizedBox(width: 20);
@@ -23,7 +23,7 @@ class _SplashPageState extends State<SplashPage> {
     Timer(
       kDuration,
       () => context.router.replace(
-        MainRoute(),
+        const MainRoute(),
       ),
     );
   }
@@ -35,52 +35,16 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildTmdbHeading(),
+            const TmdbHeading(
+              fontSize: 55,
+              containerWidth: 150,
+              containerHeight: 50,
+            ),
             kHeight,
             _buildSubTitle(),
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildTmdbHeading() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'TMDB',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.notoSans(
-            fontWeight: FontWeight.bold,
-            fontSize: 55,
-          ),
-        ),
-        kWidth,
-        Container(
-          width: 150,
-          height: 50,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                kPrimaryColor,
-                kBackgroundColor,
-              ],
-              begin: FractionalOffset.centerLeft,
-              end: FractionalOffset.centerRight,
-            ),
-            borderRadius: BorderRadius.circular(50),
-            boxShadow: [
-              BoxShadow(
-                color: kPrimaryColor.withOpacity(0.5),
-                spreadRadius: 2,
-                blurRadius: 4,
-                offset: Offset(-8, 0),
-              ),
-            ],
-          ),
-        ),
-      ],
     );
   }
 

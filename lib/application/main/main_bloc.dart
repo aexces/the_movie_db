@@ -8,7 +8,7 @@ part 'main_state.dart';
 part 'main_bloc.freezed.dart';
 
 class MainBloc extends Bloc<MainEvent, MainState> {
-  MainBloc() : super(MainState(currentIndex: 0));
+  MainBloc() : super(const MainState(currentIndex: 0));
 
   @override
   Stream<MainState> mapEventToState(
