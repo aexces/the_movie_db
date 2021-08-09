@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:the_movie_db/presentation/pages/home/widgets/image_builder.dart';
-// import 'package:flutter/widgets.dart';
 
 List<Widget> items = <Widget>[
   const ImageBuilder(imageUrl: 'assets/images/Aftermath.jpg'),
@@ -15,13 +14,3 @@ List<Widget> items = <Widget>[
   const ImageBuilder(imageUrl: "assets/images/Wrath of Man.jpg"),
 ];
 
-List<Color> kColorsList = <Color>[
-  Colors.grey,
-  Colors.yellow,
-  Colors.green,
-  Colors.cyan,
-  Colors.pink,
-  Colors.black,
-  Colors.red,
-  Colors.amber,
-];
