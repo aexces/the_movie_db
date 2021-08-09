@@ -3,11 +3,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:the_movie_db/presentation/router/app_router.gr.dart';
+import 'package:the_movie_db/presentation/widgets/constant_widgets.dart';
 import 'package:the_movie_db/presentation/widgets/thdb_heading.dart';
-
-const kDuration = Duration(seconds: 3);
-const kWidth = SizedBox(width: 20);
-const kHeight = SizedBox(height: 20);
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);

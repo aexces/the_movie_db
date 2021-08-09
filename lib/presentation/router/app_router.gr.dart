@@ -7,6 +7,7 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 
+import '../pages/home/home_page.dart' as _i5;
 import '../pages/main/main_page.dart' as _i4;
 import '../pages/splash/splash_page.dart' as _i3;
 
@@ -25,13 +26,19 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i4.MainPage();
+        }),
+    HomeRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i5.HomePage();
         })
   };
 
   @override
   List<_i1.RouteConfig> get routes => [
         _i1.RouteConfig(SplashRoute.name, path: '/'),
-        _i1.RouteConfig(MainRoute.name, path: '/main-page')
+        _i1.RouteConfig(MainRoute.name, path: '/main-page'),
+        _i1.RouteConfig(HomeRoute.name, path: '/home-page')
       ];
 }
 
@@ -45,4 +52,10 @@ class MainRoute extends _i1.PageRouteInfo {
   const MainRoute() : super(name, path: '/main-page');
 
   static const String name = 'MainRoute';
+}
+
+class HomeRoute extends _i1.PageRouteInfo {
+  const HomeRoute() : super(name, path: '/home-page');
+
+  static const String name = 'HomeRoute';
 }
