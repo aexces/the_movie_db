@@ -3,8 +3,9 @@ part of 'home_bloc.dart';
 @freezed
 class HomeState with _$HomeState {
   const factory HomeState({
-    required List<Results> results,
-    required Option<Either<HomeFailure, List<Results>>> homeOption,
+    List<Results>? results,
+    List<SeriesResult>? seriesResult,
+    required Option<Either<HomeFailure, List>> homeOption,
     bool? isLoading,
   }) = _Initial;
 

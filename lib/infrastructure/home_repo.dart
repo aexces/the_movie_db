@@ -27,4 +27,23 @@ class HomeRepo extends IHomeRepository {
       return const Left(HomeFailure.clientFailure());
     }
   }
+
+  @override
+  Future<Either<HomeFailure, List<SeriesResult>>> getSeries() async {
+    try {
+      final Response response =
+          await Dio(BaseOptions()).get(ApiEndPoints.getSeries);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        final List<SeriesResult> results = [];
+        for (final raw in response.data['results']) {
+          results.add(SeriesResult.fromJson(raw as Map<String, dynamic>));
+        }
+        return Right(results);
+      } else {
+        return const Left(HomeFailure.serverFailure());
+      }
+    } catch (e) {
+      return const Left(HomeFailure.clientFailure());
+    }
+  }
 }

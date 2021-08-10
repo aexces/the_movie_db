@@ -43,6 +43,26 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       },
+      getSeries: (e) async* {
+        yield state.copyWith(isLoading: true);
+        final Either<HomeFailure, List<SeriesResult>> homeOption =
+            await repository.getSeries();
+        yield homeOption.fold(
+          (l) => state.copyWith(
+            isLoading: false,
+            homeOption: Some(
+              Left(l),
+            ),
+          ),
+          (r) => state.copyWith(
+            isLoading: false,
+            seriesResult: r,
+            homeOption: Some(
+              Right(r),
+            ),
+          ),
+        );
+      },
     );
   }
 }

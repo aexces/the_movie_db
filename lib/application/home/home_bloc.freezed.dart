@@ -19,6 +19,10 @@ class _$HomeEventTearOff {
   GetAllHomeData getAllHomeData() {
     return const GetAllHomeData();
   }
+
+  GetSeries getSeries() {
+    return const GetSeries();
+  }
 }
 
 /// @nodoc
@@ -29,22 +33,26 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getAllHomeData,
+    required TResult Function() getSeries,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(GetAllHomeData value) getAllHomeData,
+    required TResult Function(GetSeries value) getSeries,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,6 +113,7 @@ class _$GetAllHomeData implements GetAllHomeData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getAllHomeData,
+    required TResult Function() getSeries,
   }) {
     return getAllHomeData();
   }
@@ -113,6 +122,7 @@ class _$GetAllHomeData implements GetAllHomeData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
     required TResult orElse(),
   }) {
     if (getAllHomeData != null) {
@@ -125,6 +135,7 @@ class _$GetAllHomeData implements GetAllHomeData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(GetAllHomeData value) getAllHomeData,
+    required TResult Function(GetSeries value) getSeries,
   }) {
     return getAllHomeData(this);
   }
@@ -133,6 +144,7 @@ class _$GetAllHomeData implements GetAllHomeData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
     required TResult orElse(),
   }) {
     if (getAllHomeData != null) {
@@ -147,15 +159,100 @@ abstract class GetAllHomeData implements HomeEvent {
 }
 
 /// @nodoc
+abstract class $GetSeriesCopyWith<$Res> {
+  factory $GetSeriesCopyWith(GetSeries value, $Res Function(GetSeries) then) =
+      _$GetSeriesCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$GetSeriesCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
+    implements $GetSeriesCopyWith<$Res> {
+  _$GetSeriesCopyWithImpl(GetSeries _value, $Res Function(GetSeries) _then)
+      : super(_value, (v) => _then(v as GetSeries));
+
+  @override
+  GetSeries get _value => super._value as GetSeries;
+}
+
+/// @nodoc
+
+class _$GetSeries implements GetSeries {
+  const _$GetSeries();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getSeries()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is GetSeries);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllHomeData,
+    required TResult Function() getSeries,
+  }) {
+    return getSeries();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
+    required TResult orElse(),
+  }) {
+    if (getSeries != null) {
+      return getSeries();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllHomeData value) getAllHomeData,
+    required TResult Function(GetSeries value) getSeries,
+  }) {
+    return getSeries(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
+    required TResult orElse(),
+  }) {
+    if (getSeries != null) {
+      return getSeries(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetSeries implements HomeEvent {
+  const factory GetSeries() = _$GetSeries;
+}
+
+/// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
   _Initial call(
-      {required List<Results> results,
-      required Option<Either<HomeFailure, List<Results>>> homeOption,
+      {List<Results>? results,
+      List<SeriesResult>? seriesResult,
+      required Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading}) {
     return _Initial(
       results: results,
+      seriesResult: seriesResult,
       homeOption: homeOption,
       isLoading: isLoading,
     );
@@ -167,8 +264,9 @@ const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
-  List<Results> get results => throw _privateConstructorUsedError;
-  Option<Either<HomeFailure, List<Results>>> get homeOption =>
+  List<Results>? get results => throw _privateConstructorUsedError;
+  List<SeriesResult>? get seriesResult => throw _privateConstructorUsedError;
+  Option<Either<HomeFailure, List>> get homeOption =>
       throw _privateConstructorUsedError;
   bool? get isLoading => throw _privateConstructorUsedError;
 
@@ -182,8 +280,9 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
   $Res call(
-      {List<Results> results,
-      Option<Either<HomeFailure, List<Results>>> homeOption,
+      {List<Results>? results,
+      List<SeriesResult>? seriesResult,
+      Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading});
 }
 
@@ -198,6 +297,7 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   @override
   $Res call({
     Object? results = freezed,
+    Object? seriesResult = freezed,
     Object? homeOption = freezed,
     Object? isLoading = freezed,
   }) {
@@ -205,11 +305,15 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
       results: results == freezed
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>,
+              as List<Results>?,
+      seriesResult: seriesResult == freezed
+          ? _value.seriesResult
+          : seriesResult // ignore: cast_nullable_to_non_nullable
+              as List<SeriesResult>?,
       homeOption: homeOption == freezed
           ? _value.homeOption
           : homeOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<HomeFailure, List<Results>>>,
+              as Option<Either<HomeFailure, List>>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -224,8 +328,9 @@ abstract class _$InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$InitialCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Results> results,
-      Option<Either<HomeFailure, List<Results>>> homeOption,
+      {List<Results>? results,
+      List<SeriesResult>? seriesResult,
+      Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading});
 }
 
@@ -241,6 +346,7 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? results = freezed,
+    Object? seriesResult = freezed,
     Object? homeOption = freezed,
     Object? isLoading = freezed,
   }) {
@@ -248,11 +354,15 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
       results: results == freezed
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>,
+              as List<Results>?,
+      seriesResult: seriesResult == freezed
+          ? _value.seriesResult
+          : seriesResult // ignore: cast_nullable_to_non_nullable
+              as List<SeriesResult>?,
       homeOption: homeOption == freezed
           ? _value.homeOption
           : homeOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<HomeFailure, List<Results>>>,
+              as Option<Either<HomeFailure, List>>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -265,18 +375,23 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
 class _$_Initial implements _Initial {
   const _$_Initial(
-      {required this.results, required this.homeOption, this.isLoading});
+      {this.results,
+      this.seriesResult,
+      required this.homeOption,
+      this.isLoading});
 
   @override
-  final List<Results> results;
+  final List<Results>? results;
   @override
-  final Option<Either<HomeFailure, List<Results>>> homeOption;
+  final List<SeriesResult>? seriesResult;
+  @override
+  final Option<Either<HomeFailure, List>> homeOption;
   @override
   final bool? isLoading;
 
   @override
   String toString() {
-    return 'HomeState(results: $results, homeOption: $homeOption, isLoading: $isLoading)';
+    return 'HomeState(results: $results, seriesResult: $seriesResult, homeOption: $homeOption, isLoading: $isLoading)';
   }
 
   @override
@@ -286,6 +401,9 @@ class _$_Initial implements _Initial {
             (identical(other.results, results) ||
                 const DeepCollectionEquality()
                     .equals(other.results, results)) &&
+            (identical(other.seriesResult, seriesResult) ||
+                const DeepCollectionEquality()
+                    .equals(other.seriesResult, seriesResult)) &&
             (identical(other.homeOption, homeOption) ||
                 const DeepCollectionEquality()
                     .equals(other.homeOption, homeOption)) &&
@@ -298,6 +416,7 @@ class _$_Initial implements _Initial {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(results) ^
+      const DeepCollectionEquality().hash(seriesResult) ^
       const DeepCollectionEquality().hash(homeOption) ^
       const DeepCollectionEquality().hash(isLoading);
 
@@ -309,14 +428,17 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements HomeState {
   const factory _Initial(
-      {required List<Results> results,
-      required Option<Either<HomeFailure, List<Results>>> homeOption,
+      {List<Results>? results,
+      List<SeriesResult>? seriesResult,
+      required Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading}) = _$_Initial;
 
   @override
-  List<Results> get results => throw _privateConstructorUsedError;
+  List<Results>? get results => throw _privateConstructorUsedError;
   @override
-  Option<Either<HomeFailure, List<Results>>> get homeOption =>
+  List<SeriesResult>? get seriesResult => throw _privateConstructorUsedError;
+  @override
+  Option<Either<HomeFailure, List>> get homeOption =>
       throw _privateConstructorUsedError;
   @override
   bool? get isLoading => throw _privateConstructorUsedError;

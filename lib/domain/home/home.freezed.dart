@@ -162,18 +162,10 @@ class _$ResultsTearOff {
 
   _Results call(
       {required int id,
-      required String title,
-      @JsonKey(name: 'vote_average') required double voteAverage,
-      @JsonKey(name: "release_date") required String releaseDate,
-      @JsonKey(name: "poster_path") required String posterPath,
-      @JsonKey(name: "backdrop_path") required String backdropPath}) {
+      @JsonKey(name: "poster_path") required String posterPath}) {
     return _Results(
       id: id,
-      title: title,
-      voteAverage: voteAverage,
-      releaseDate: releaseDate,
       posterPath: posterPath,
-      backdropPath: backdropPath,
     );
   }
 
@@ -188,15 +180,8 @@ const $Results = _$ResultsTearOff();
 /// @nodoc
 mixin _$Results {
   int get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  @JsonKey(name: 'vote_average')
-  double get voteAverage => throw _privateConstructorUsedError;
-  @JsonKey(name: "release_date")
-  String get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: "poster_path")
   String get posterPath => throw _privateConstructorUsedError;
-  @JsonKey(name: "backdrop_path")
-  String get backdropPath => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -207,13 +192,7 @@ mixin _$Results {
 abstract class $ResultsCopyWith<$Res> {
   factory $ResultsCopyWith(Results value, $Res Function(Results) then) =
       _$ResultsCopyWithImpl<$Res>;
-  $Res call(
-      {int id,
-      String title,
-      @JsonKey(name: 'vote_average') double voteAverage,
-      @JsonKey(name: "release_date") String releaseDate,
-      @JsonKey(name: "poster_path") String posterPath,
-      @JsonKey(name: "backdrop_path") String backdropPath});
+  $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
@@ -227,36 +206,16 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? title = freezed,
-    Object? voteAverage = freezed,
-    Object? releaseDate = freezed,
     Object? posterPath = freezed,
-    Object? backdropPath = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      voteAverage: voteAverage == freezed
-          ? _value.voteAverage
-          : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double,
-      releaseDate: releaseDate == freezed
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as String,
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      backdropPath: backdropPath == freezed
-          ? _value.backdropPath
-          : backdropPath // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -267,13 +226,7 @@ abstract class _$ResultsCopyWith<$Res> implements $ResultsCopyWith<$Res> {
   factory _$ResultsCopyWith(_Results value, $Res Function(_Results) then) =
       __$ResultsCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int id,
-      String title,
-      @JsonKey(name: 'vote_average') double voteAverage,
-      @JsonKey(name: "release_date") String releaseDate,
-      @JsonKey(name: "poster_path") String posterPath,
-      @JsonKey(name: "backdrop_path") String backdropPath});
+  $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
@@ -288,36 +241,16 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? title = freezed,
-    Object? voteAverage = freezed,
-    Object? releaseDate = freezed,
     Object? posterPath = freezed,
-    Object? backdropPath = freezed,
   }) {
     return _then(_Results(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      voteAverage: voteAverage == freezed
-          ? _value.voteAverage
-          : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double,
-      releaseDate: releaseDate == freezed
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as String,
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      backdropPath: backdropPath == freezed
-          ? _value.backdropPath
-          : backdropPath // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -328,11 +261,7 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
 class _$_Results implements _Results {
   const _$_Results(
       {required this.id,
-      required this.title,
-      @JsonKey(name: 'vote_average') required this.voteAverage,
-      @JsonKey(name: "release_date") required this.releaseDate,
-      @JsonKey(name: "poster_path") required this.posterPath,
-      @JsonKey(name: "backdrop_path") required this.backdropPath});
+      @JsonKey(name: "poster_path") required this.posterPath});
 
   factory _$_Results.fromJson(Map<String, dynamic> json) =>
       _$_$_ResultsFromJson(json);
@@ -340,23 +269,12 @@ class _$_Results implements _Results {
   @override
   final int id;
   @override
-  final String title;
-  @override
-  @JsonKey(name: 'vote_average')
-  final double voteAverage;
-  @override
-  @JsonKey(name: "release_date")
-  final String releaseDate;
-  @override
   @JsonKey(name: "poster_path")
   final String posterPath;
-  @override
-  @JsonKey(name: "backdrop_path")
-  final String backdropPath;
 
   @override
   String toString() {
-    return 'Results(id: $id, title: $title, voteAverage: $voteAverage, releaseDate: $releaseDate, posterPath: $posterPath, backdropPath: $backdropPath)';
+    return 'Results(id: $id, posterPath: $posterPath)';
   }
 
   @override
@@ -365,31 +283,16 @@ class _$_Results implements _Results {
         (other is _Results &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.voteAverage, voteAverage) ||
-                const DeepCollectionEquality()
-                    .equals(other.voteAverage, voteAverage)) &&
-            (identical(other.releaseDate, releaseDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.releaseDate, releaseDate)) &&
             (identical(other.posterPath, posterPath) ||
                 const DeepCollectionEquality()
-                    .equals(other.posterPath, posterPath)) &&
-            (identical(other.backdropPath, backdropPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.backdropPath, backdropPath)));
+                    .equals(other.posterPath, posterPath)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(voteAverage) ^
-      const DeepCollectionEquality().hash(releaseDate) ^
-      const DeepCollectionEquality().hash(posterPath) ^
-      const DeepCollectionEquality().hash(backdropPath);
+      const DeepCollectionEquality().hash(posterPath);
 
   @JsonKey(ignore: true)
   @override
@@ -404,34 +307,336 @@ class _$_Results implements _Results {
 
 abstract class _Results implements Results {
   const factory _Results(
-          {required int id,
-          required String title,
-          @JsonKey(name: 'vote_average') required double voteAverage,
-          @JsonKey(name: "release_date") required String releaseDate,
-          @JsonKey(name: "poster_path") required String posterPath,
-          @JsonKey(name: "backdrop_path") required String backdropPath}) =
-      _$_Results;
+      {required int id,
+      @JsonKey(name: "poster_path") required String posterPath}) = _$_Results;
 
   factory _Results.fromJson(Map<String, dynamic> json) = _$_Results.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  String get title => throw _privateConstructorUsedError;
+  @JsonKey(name: "poster_path")
+  String get posterPath => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'vote_average')
-  double get voteAverage => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$ResultsCopyWith<_Results> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Series _$SeriesFromJson(Map<String, dynamic> json) {
+  return _Series.fromJson(json);
+}
+
+/// @nodoc
+class _$SeriesTearOff {
+  const _$SeriesTearOff();
+
+  _Series call({required List<SeriesResult> result}) {
+    return _Series(
+      result: result,
+    );
+  }
+
+  Series fromJson(Map<String, Object> json) {
+    return Series.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Series = _$SeriesTearOff();
+
+/// @nodoc
+mixin _$Series {
+  List<SeriesResult> get result => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SeriesCopyWith<Series> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SeriesCopyWith<$Res> {
+  factory $SeriesCopyWith(Series value, $Res Function(Series) then) =
+      _$SeriesCopyWithImpl<$Res>;
+  $Res call({List<SeriesResult> result});
+}
+
+/// @nodoc
+class _$SeriesCopyWithImpl<$Res> implements $SeriesCopyWith<$Res> {
+  _$SeriesCopyWithImpl(this._value, this._then);
+
+  final Series _value;
+  // ignore: unused_field
+  final $Res Function(Series) _then;
+
   @override
-  @JsonKey(name: "release_date")
-  String get releaseDate => throw _privateConstructorUsedError;
+  $Res call({
+    Object? result = freezed,
+  }) {
+    return _then(_value.copyWith(
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<SeriesResult>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
+  factory _$SeriesCopyWith(_Series value, $Res Function(_Series) then) =
+      __$SeriesCopyWithImpl<$Res>;
+  @override
+  $Res call({List<SeriesResult> result});
+}
+
+/// @nodoc
+class __$SeriesCopyWithImpl<$Res> extends _$SeriesCopyWithImpl<$Res>
+    implements _$SeriesCopyWith<$Res> {
+  __$SeriesCopyWithImpl(_Series _value, $Res Function(_Series) _then)
+      : super(_value, (v) => _then(v as _Series));
+
+  @override
+  _Series get _value => super._value as _Series;
+
+  @override
+  $Res call({
+    Object? result = freezed,
+  }) {
+    return _then(_Series(
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<SeriesResult>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Series implements _Series {
+  const _$_Series({required this.result});
+
+  factory _$_Series.fromJson(Map<String, dynamic> json) =>
+      _$_$_SeriesFromJson(json);
+
+  @override
+  final List<SeriesResult> result;
+
+  @override
+  String toString() {
+    return 'Series(result: $result)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Series &&
+            (identical(other.result, result) ||
+                const DeepCollectionEquality().equals(other.result, result)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
+
+  @JsonKey(ignore: true)
+  @override
+  _$SeriesCopyWith<_Series> get copyWith =>
+      __$SeriesCopyWithImpl<_Series>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SeriesToJson(this);
+  }
+}
+
+abstract class _Series implements Series {
+  const factory _Series({required List<SeriesResult> result}) = _$_Series;
+
+  factory _Series.fromJson(Map<String, dynamic> json) = _$_Series.fromJson;
+
+  @override
+  List<SeriesResult> get result => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$SeriesCopyWith<_Series> get copyWith => throw _privateConstructorUsedError;
+}
+
+SeriesResult _$SeriesResultFromJson(Map<String, dynamic> json) {
+  return _SeriesResult.fromJson(json);
+}
+
+/// @nodoc
+class _$SeriesResultTearOff {
+  const _$SeriesResultTearOff();
+
+  _SeriesResult call(
+      {required int id,
+      @JsonKey(name: "poster_path") required String posterPath}) {
+    return _SeriesResult(
+      id: id,
+      posterPath: posterPath,
+    );
+  }
+
+  SeriesResult fromJson(Map<String, Object> json) {
+    return SeriesResult.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SeriesResult = _$SeriesResultTearOff();
+
+/// @nodoc
+mixin _$SeriesResult {
+  int get id => throw _privateConstructorUsedError;
+  @JsonKey(name: "poster_path")
+  String get posterPath => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SeriesResultCopyWith<SeriesResult> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SeriesResultCopyWith<$Res> {
+  factory $SeriesResultCopyWith(
+          SeriesResult value, $Res Function(SeriesResult) then) =
+      _$SeriesResultCopyWithImpl<$Res>;
+  $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
+}
+
+/// @nodoc
+class _$SeriesResultCopyWithImpl<$Res> implements $SeriesResultCopyWith<$Res> {
+  _$SeriesResultCopyWithImpl(this._value, this._then);
+
+  final SeriesResult _value;
+  // ignore: unused_field
+  final $Res Function(SeriesResult) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? posterPath = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$SeriesResultCopyWith<$Res>
+    implements $SeriesResultCopyWith<$Res> {
+  factory _$SeriesResultCopyWith(
+          _SeriesResult value, $Res Function(_SeriesResult) then) =
+      __$SeriesResultCopyWithImpl<$Res>;
+  @override
+  $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
+}
+
+/// @nodoc
+class __$SeriesResultCopyWithImpl<$Res> extends _$SeriesResultCopyWithImpl<$Res>
+    implements _$SeriesResultCopyWith<$Res> {
+  __$SeriesResultCopyWithImpl(
+      _SeriesResult _value, $Res Function(_SeriesResult) _then)
+      : super(_value, (v) => _then(v as _SeriesResult));
+
+  @override
+  _SeriesResult get _value => super._value as _SeriesResult;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? posterPath = freezed,
+  }) {
+    return _then(_SeriesResult(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      posterPath: posterPath == freezed
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_SeriesResult implements _SeriesResult {
+  const _$_SeriesResult(
+      {required this.id,
+      @JsonKey(name: "poster_path") required this.posterPath});
+
+  factory _$_SeriesResult.fromJson(Map<String, dynamic> json) =>
+      _$_$_SeriesResultFromJson(json);
+
+  @override
+  final int id;
+  @override
+  @JsonKey(name: "poster_path")
+  final String posterPath;
+
+  @override
+  String toString() {
+    return 'SeriesResult(id: $id, posterPath: $posterPath)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _SeriesResult &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.posterPath, posterPath) ||
+                const DeepCollectionEquality()
+                    .equals(other.posterPath, posterPath)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(posterPath);
+
+  @JsonKey(ignore: true)
+  @override
+  _$SeriesResultCopyWith<_SeriesResult> get copyWith =>
+      __$SeriesResultCopyWithImpl<_SeriesResult>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SeriesResultToJson(this);
+  }
+}
+
+abstract class _SeriesResult implements SeriesResult {
+  const factory _SeriesResult(
+          {required int id,
+          @JsonKey(name: "poster_path") required String posterPath}) =
+      _$_SeriesResult;
+
+  factory _SeriesResult.fromJson(Map<String, dynamic> json) =
+      _$_SeriesResult.fromJson;
+
+  @override
+  int get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "poster_path")
   String get posterPath => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: "backdrop_path")
-  String get backdropPath => throw _privateConstructorUsedError;
-  @override
   @JsonKey(ignore: true)
-  _$ResultsCopyWith<_Results> get copyWith =>
+  _$SeriesResultCopyWith<_SeriesResult> get copyWith =>
       throw _privateConstructorUsedError;
 }

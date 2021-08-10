@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:the_movie_db/application/home/home_bloc.dart';
-import 'package:the_movie_db/core/colors.dart';
-import 'package:the_movie_db/core/string.dart';
 import 'package:the_movie_db/presentation/pages/home/widgets/constant_widgets.dart';
+import 'package:the_movie_db/presentation/pages/home/widgets/movie_poster.dart';
+import 'package:the_movie_db/presentation/pages/home/widgets/section_heading.dart';
+import 'package:the_movie_db/presentation/pages/home/widgets/series_poster.dart';
 import 'package:the_movie_db/presentation/widgets/constant_widgets.dart';
-import 'package:the_movie_db/presentation/widgets/movie_poster.dart';
 import 'package:the_movie_db/presentation/widgets/thdb_heading.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,7 +20,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeBloc, HomeState>(
+    return BlocConsumer<HomeBloc, HomeState>(
+      listener: (context, state) {
+        if (state.results!.isEmpty) {
+          context.read<HomeBloc>().add(
+                const HomeEvent.getSeries(),
+              );
+        }
+      },
       builder: (context, state) {
         if (state.isLoading!) {
           return Center(
@@ -65,51 +72,33 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         kHeight,
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text(
-                                'Movies',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                textBaseline: TextBaseline.alphabetic,
-                                children: const [
-                                  Text(
-                                    'See All',
-                                    style: TextStyle(
-                                      color: kWhite,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  Icon(
-                                    Icons.arrow_forward_ios,
-                                    size: 12,
-                                    color: kWhite,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
+                        const SectionHeading(title: 'Trending'),
                         kHeight,
                         LimitedBox(
                           maxHeight: 185,
                           child: ListView.builder(
-                            itemCount: state.results.length,
+                            itemCount: state.results!.length,
                             scrollDirection: Axis.horizontal,
                             padding: const EdgeInsets.symmetric(horizontal: 5),
                             itemBuilder: (BuildContext context, int index) {
                               return MoviePoster(
-                                results: state.results[index],
+                                results: state.results![index],
+                              );
+                            },
+                          ),
+                        ),
+                        kHeight,
+                        const SectionHeading(title: 'Movies'),
+                        kHeight,
+                        LimitedBox(
+                          maxHeight: 185,
+                          child: ListView.builder(
+                            itemCount: state.results!.length,
+                            scrollDirection: Axis.horizontal,
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            itemBuilder: (BuildContext context, int index) {
+                              return SeriesPoster(
+                                seriesResult: state.seriesResult![index],
                               );
                             },
                           ),

@@ -5,8 +5,6 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.yellow,
-    );
+    return const Scaffold();
   }
 }

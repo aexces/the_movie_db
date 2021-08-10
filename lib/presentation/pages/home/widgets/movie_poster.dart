@@ -8,7 +8,6 @@ class MoviePoster extends StatelessWidget {
     Key? key,
     required this.results,
   }) : super(key: key);
-
   final Results results;
 
   @override
