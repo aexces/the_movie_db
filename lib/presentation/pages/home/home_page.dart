@@ -69,7 +69,6 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.baseline,
                             children: [
                               const Text(
                                 'Movies',
@@ -95,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                                     Icons.arrow_forward_ios,
                                     size: 12,
                                     color: kWhite,
-                                  )
+                                  ),
                                 ],
                               )
                             ],
@@ -107,11 +106,10 @@ class _HomePageState extends State<HomePage> {
                           child: ListView.builder(
                             itemCount: state.results.length,
                             scrollDirection: Axis.horizontal,
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
                             itemBuilder: (BuildContext context, int index) {
                               return MoviePoster(
-                                imageUrl: kImageBaseUrl +
-                                    state.results[index].posterPath,
+                                results: state.results[index],
                               );
                             },
                           ),
