@@ -246,13 +246,13 @@ class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
   _Initial call(
-      {List<Results>? results,
-      List<SeriesResult>? seriesResult,
+      {List<TopRatedMoviesResult>? topRatedResult,
+      List<TrendingResult>? trendingResult,
       required Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading}) {
     return _Initial(
-      results: results,
-      seriesResult: seriesResult,
+      topRatedResult: topRatedResult,
+      trendingResult: trendingResult,
       homeOption: homeOption,
       isLoading: isLoading,
     );
@@ -264,8 +264,10 @@ const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
-  List<Results>? get results => throw _privateConstructorUsedError;
-  List<SeriesResult>? get seriesResult => throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult>? get topRatedResult =>
+      throw _privateConstructorUsedError;
+  List<TrendingResult>? get trendingResult =>
+      throw _privateConstructorUsedError;
   Option<Either<HomeFailure, List>> get homeOption =>
       throw _privateConstructorUsedError;
   bool? get isLoading => throw _privateConstructorUsedError;
@@ -280,8 +282,8 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
   $Res call(
-      {List<Results>? results,
-      List<SeriesResult>? seriesResult,
+      {List<TopRatedMoviesResult>? topRatedResult,
+      List<TrendingResult>? trendingResult,
       Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading});
 }
@@ -296,20 +298,20 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? results = freezed,
-    Object? seriesResult = freezed,
+    Object? topRatedResult = freezed,
+    Object? trendingResult = freezed,
     Object? homeOption = freezed,
     Object? isLoading = freezed,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
-      seriesResult: seriesResult == freezed
-          ? _value.seriesResult
-          : seriesResult // ignore: cast_nullable_to_non_nullable
-              as List<SeriesResult>?,
+      topRatedResult: topRatedResult == freezed
+          ? _value.topRatedResult
+          : topRatedResult // ignore: cast_nullable_to_non_nullable
+              as List<TopRatedMoviesResult>?,
+      trendingResult: trendingResult == freezed
+          ? _value.trendingResult
+          : trendingResult // ignore: cast_nullable_to_non_nullable
+              as List<TrendingResult>?,
       homeOption: homeOption == freezed
           ? _value.homeOption
           : homeOption // ignore: cast_nullable_to_non_nullable
@@ -328,8 +330,8 @@ abstract class _$InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$InitialCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Results>? results,
-      List<SeriesResult>? seriesResult,
+      {List<TopRatedMoviesResult>? topRatedResult,
+      List<TrendingResult>? trendingResult,
       Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading});
 }
@@ -345,20 +347,20 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? results = freezed,
-    Object? seriesResult = freezed,
+    Object? topRatedResult = freezed,
+    Object? trendingResult = freezed,
     Object? homeOption = freezed,
     Object? isLoading = freezed,
   }) {
     return _then(_Initial(
-      results: results == freezed
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
-      seriesResult: seriesResult == freezed
-          ? _value.seriesResult
-          : seriesResult // ignore: cast_nullable_to_non_nullable
-              as List<SeriesResult>?,
+      topRatedResult: topRatedResult == freezed
+          ? _value.topRatedResult
+          : topRatedResult // ignore: cast_nullable_to_non_nullable
+              as List<TopRatedMoviesResult>?,
+      trendingResult: trendingResult == freezed
+          ? _value.trendingResult
+          : trendingResult // ignore: cast_nullable_to_non_nullable
+              as List<TrendingResult>?,
       homeOption: homeOption == freezed
           ? _value.homeOption
           : homeOption // ignore: cast_nullable_to_non_nullable
@@ -375,15 +377,15 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
 class _$_Initial implements _Initial {
   const _$_Initial(
-      {this.results,
-      this.seriesResult,
+      {this.topRatedResult,
+      this.trendingResult,
       required this.homeOption,
       this.isLoading});
 
   @override
-  final List<Results>? results;
+  final List<TopRatedMoviesResult>? topRatedResult;
   @override
-  final List<SeriesResult>? seriesResult;
+  final List<TrendingResult>? trendingResult;
   @override
   final Option<Either<HomeFailure, List>> homeOption;
   @override
@@ -391,19 +393,19 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'HomeState(results: $results, seriesResult: $seriesResult, homeOption: $homeOption, isLoading: $isLoading)';
+    return 'HomeState(topRatedResult: $topRatedResult, trendingResult: $trendingResult, homeOption: $homeOption, isLoading: $isLoading)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Initial &&
-            (identical(other.results, results) ||
+            (identical(other.topRatedResult, topRatedResult) ||
                 const DeepCollectionEquality()
-                    .equals(other.results, results)) &&
-            (identical(other.seriesResult, seriesResult) ||
+                    .equals(other.topRatedResult, topRatedResult)) &&
+            (identical(other.trendingResult, trendingResult) ||
                 const DeepCollectionEquality()
-                    .equals(other.seriesResult, seriesResult)) &&
+                    .equals(other.trendingResult, trendingResult)) &&
             (identical(other.homeOption, homeOption) ||
                 const DeepCollectionEquality()
                     .equals(other.homeOption, homeOption)) &&
@@ -415,8 +417,8 @@ class _$_Initial implements _Initial {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(results) ^
-      const DeepCollectionEquality().hash(seriesResult) ^
+      const DeepCollectionEquality().hash(topRatedResult) ^
+      const DeepCollectionEquality().hash(trendingResult) ^
       const DeepCollectionEquality().hash(homeOption) ^
       const DeepCollectionEquality().hash(isLoading);
 
@@ -428,15 +430,17 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements HomeState {
   const factory _Initial(
-      {List<Results>? results,
-      List<SeriesResult>? seriesResult,
+      {List<TopRatedMoviesResult>? topRatedResult,
+      List<TrendingResult>? trendingResult,
       required Option<Either<HomeFailure, List>> homeOption,
       bool? isLoading}) = _$_Initial;
 
   @override
-  List<Results>? get results => throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult>? get topRatedResult =>
+      throw _privateConstructorUsedError;
   @override
-  List<SeriesResult>? get seriesResult => throw _privateConstructorUsedError;
+  List<TrendingResult>? get trendingResult =>
+      throw _privateConstructorUsedError;
   @override
   Option<Either<HomeFailure, List>> get homeOption =>
       throw _privateConstructorUsedError;

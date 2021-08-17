@@ -10,14 +10,16 @@ import 'package:the_movie_db/infrastructure/api_end_points.dart';
 @prod
 class HomeRepo extends IHomeRepository {
   @override
-  Future<Either<HomeFailure, List<Results>>> getAllHomeDatas() async {
+  Future<Either<HomeFailure, List<TopRatedMoviesResult>>>
+      getTopRatedMovies() async {
     try {
       final Response response =
-          await Dio(BaseOptions()).get(ApiEndPoints.getAllHomeData);
+          await Dio(BaseOptions()).get(ApiEndPoints.getTopRatedMovies);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        final List<Results> results = [];
+        final List<TopRatedMoviesResult> results = [];
         for (final raw in response.data['results']) {
-          results.add(Results.fromJson(raw as Map<String, dynamic>));
+          results
+              .add(TopRatedMoviesResult.fromJson(raw as Map<String, dynamic>));
         }
         return Right(results);
       } else {
@@ -29,14 +31,14 @@ class HomeRepo extends IHomeRepository {
   }
 
   @override
-  Future<Either<HomeFailure, List<SeriesResult>>> getSeries() async {
+  Future<Either<HomeFailure, List<TrendingResult>>> getTrendingMovies() async {
     try {
       final Response response =
-          await Dio(BaseOptions()).get(ApiEndPoints.getSeries);
+          await Dio(BaseOptions()).get(ApiEndPoints.getTrendingMovies);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        final List<SeriesResult> results = [];
+        final List<TrendingResult> results = [];
         for (final raw in response.data['results']) {
-          results.add(SeriesResult.fromJson(raw as Map<String, dynamic>));
+          results.add(TrendingResult.fromJson(raw as Map<String, dynamic>));
         }
         return Right(results);
       } else {

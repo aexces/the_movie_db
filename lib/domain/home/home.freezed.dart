@@ -20,9 +20,9 @@ Home _$HomeFromJson(Map<String, dynamic> json) {
 class _$HomeTearOff {
   const _$HomeTearOff();
 
-  _Home call({required List<Results> results}) {
+  _Home call({required List<TopRatedMoviesResult> result}) {
     return _Home(
-      results: results,
+      result: result,
     );
   }
 
@@ -36,7 +36,7 @@ const $Home = _$HomeTearOff();
 
 /// @nodoc
 mixin _$Home {
-  List<Results> get results => throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult> get result => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,7 +47,7 @@ mixin _$Home {
 abstract class $HomeCopyWith<$Res> {
   factory $HomeCopyWith(Home value, $Res Function(Home) then) =
       _$HomeCopyWithImpl<$Res>;
-  $Res call({List<Results> results});
+  $Res call({List<TopRatedMoviesResult> result});
 }
 
 /// @nodoc
@@ -60,13 +60,13 @@ class _$HomeCopyWithImpl<$Res> implements $HomeCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? results = freezed,
+    Object? result = freezed,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<TopRatedMoviesResult>,
     ));
   }
 }
@@ -76,7 +76,7 @@ abstract class _$HomeCopyWith<$Res> implements $HomeCopyWith<$Res> {
   factory _$HomeCopyWith(_Home value, $Res Function(_Home) then) =
       __$HomeCopyWithImpl<$Res>;
   @override
-  $Res call({List<Results> results});
+  $Res call({List<TopRatedMoviesResult> result});
 }
 
 /// @nodoc
@@ -90,13 +90,13 @@ class __$HomeCopyWithImpl<$Res> extends _$HomeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? results = freezed,
+    Object? result = freezed,
   }) {
     return _then(_Home(
-      results: results == freezed
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<TopRatedMoviesResult>,
     ));
   }
 }
@@ -104,30 +104,30 @@ class __$HomeCopyWithImpl<$Res> extends _$HomeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Home implements _Home {
-  const _$_Home({required this.results});
+  const _$_Home({required this.result});
 
   factory _$_Home.fromJson(Map<String, dynamic> json) =>
       _$_$_HomeFromJson(json);
 
   @override
-  final List<Results> results;
+  final List<TopRatedMoviesResult> result;
 
   @override
   String toString() {
-    return 'Home(results: $results)';
+    return 'Home(result: $result)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Home &&
-            (identical(other.results, results) ||
-                const DeepCollectionEquality().equals(other.results, results)));
+            (identical(other.result, result) ||
+                const DeepCollectionEquality().equals(other.result, result)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(results);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
 
   @JsonKey(ignore: true)
   @override
@@ -141,67 +141,70 @@ class _$_Home implements _Home {
 }
 
 abstract class _Home implements Home {
-  const factory _Home({required List<Results> results}) = _$_Home;
+  const factory _Home({required List<TopRatedMoviesResult> result}) = _$_Home;
 
   factory _Home.fromJson(Map<String, dynamic> json) = _$_Home.fromJson;
 
   @override
-  List<Results> get results => throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult> get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$HomeCopyWith<_Home> get copyWith => throw _privateConstructorUsedError;
 }
 
-Results _$ResultsFromJson(Map<String, dynamic> json) {
-  return _Results.fromJson(json);
+TopRatedMoviesResult _$TopRatedMoviesResultFromJson(Map<String, dynamic> json) {
+  return _TopRatedMoviesResult.fromJson(json);
 }
 
 /// @nodoc
-class _$ResultsTearOff {
-  const _$ResultsTearOff();
+class _$TopRatedMoviesResultTearOff {
+  const _$TopRatedMoviesResultTearOff();
 
-  _Results call(
+  _TopRatedMoviesResult call(
       {required int id,
       @JsonKey(name: "poster_path") required String posterPath}) {
-    return _Results(
+    return _TopRatedMoviesResult(
       id: id,
       posterPath: posterPath,
     );
   }
 
-  Results fromJson(Map<String, Object> json) {
-    return Results.fromJson(json);
+  TopRatedMoviesResult fromJson(Map<String, Object> json) {
+    return TopRatedMoviesResult.fromJson(json);
   }
 }
 
 /// @nodoc
-const $Results = _$ResultsTearOff();
+const $TopRatedMoviesResult = _$TopRatedMoviesResultTearOff();
 
 /// @nodoc
-mixin _$Results {
+mixin _$TopRatedMoviesResult {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: "poster_path")
   String get posterPath => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ResultsCopyWith<Results> get copyWith => throw _privateConstructorUsedError;
+  $TopRatedMoviesResultCopyWith<TopRatedMoviesResult> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResultsCopyWith<$Res> {
-  factory $ResultsCopyWith(Results value, $Res Function(Results) then) =
-      _$ResultsCopyWithImpl<$Res>;
+abstract class $TopRatedMoviesResultCopyWith<$Res> {
+  factory $TopRatedMoviesResultCopyWith(TopRatedMoviesResult value,
+          $Res Function(TopRatedMoviesResult) then) =
+      _$TopRatedMoviesResultCopyWithImpl<$Res>;
   $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
-class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
-  _$ResultsCopyWithImpl(this._value, this._then);
+class _$TopRatedMoviesResultCopyWithImpl<$Res>
+    implements $TopRatedMoviesResultCopyWith<$Res> {
+  _$TopRatedMoviesResultCopyWithImpl(this._value, this._then);
 
-  final Results _value;
+  final TopRatedMoviesResult _value;
   // ignore: unused_field
-  final $Res Function(Results) _then;
+  final $Res Function(TopRatedMoviesResult) _then;
 
   @override
   $Res call({
@@ -222,28 +225,32 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ResultsCopyWith<$Res> implements $ResultsCopyWith<$Res> {
-  factory _$ResultsCopyWith(_Results value, $Res Function(_Results) then) =
-      __$ResultsCopyWithImpl<$Res>;
+abstract class _$TopRatedMoviesResultCopyWith<$Res>
+    implements $TopRatedMoviesResultCopyWith<$Res> {
+  factory _$TopRatedMoviesResultCopyWith(_TopRatedMoviesResult value,
+          $Res Function(_TopRatedMoviesResult) then) =
+      __$TopRatedMoviesResultCopyWithImpl<$Res>;
   @override
   $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
-class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
-    implements _$ResultsCopyWith<$Res> {
-  __$ResultsCopyWithImpl(_Results _value, $Res Function(_Results) _then)
-      : super(_value, (v) => _then(v as _Results));
+class __$TopRatedMoviesResultCopyWithImpl<$Res>
+    extends _$TopRatedMoviesResultCopyWithImpl<$Res>
+    implements _$TopRatedMoviesResultCopyWith<$Res> {
+  __$TopRatedMoviesResultCopyWithImpl(
+      _TopRatedMoviesResult _value, $Res Function(_TopRatedMoviesResult) _then)
+      : super(_value, (v) => _then(v as _TopRatedMoviesResult));
 
   @override
-  _Results get _value => super._value as _Results;
+  _TopRatedMoviesResult get _value => super._value as _TopRatedMoviesResult;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? posterPath = freezed,
   }) {
-    return _then(_Results(
+    return _then(_TopRatedMoviesResult(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -258,13 +265,13 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Results implements _Results {
-  const _$_Results(
+class _$_TopRatedMoviesResult implements _TopRatedMoviesResult {
+  const _$_TopRatedMoviesResult(
       {required this.id,
       @JsonKey(name: "poster_path") required this.posterPath});
 
-  factory _$_Results.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResultsFromJson(json);
+  factory _$_TopRatedMoviesResult.fromJson(Map<String, dynamic> json) =>
+      _$_$_TopRatedMoviesResultFromJson(json);
 
   @override
   final int id;
@@ -274,13 +281,13 @@ class _$_Results implements _Results {
 
   @override
   String toString() {
-    return 'Results(id: $id, posterPath: $posterPath)';
+    return 'TopRatedMoviesResult(id: $id, posterPath: $posterPath)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Results &&
+        (other is _TopRatedMoviesResult &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.posterPath, posterPath) ||
@@ -296,21 +303,24 @@ class _$_Results implements _Results {
 
   @JsonKey(ignore: true)
   @override
-  _$ResultsCopyWith<_Results> get copyWith =>
-      __$ResultsCopyWithImpl<_Results>(this, _$identity);
+  _$TopRatedMoviesResultCopyWith<_TopRatedMoviesResult> get copyWith =>
+      __$TopRatedMoviesResultCopyWithImpl<_TopRatedMoviesResult>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResultsToJson(this);
+    return _$_$_TopRatedMoviesResultToJson(this);
   }
 }
 
-abstract class _Results implements Results {
-  const factory _Results(
-      {required int id,
-      @JsonKey(name: "poster_path") required String posterPath}) = _$_Results;
+abstract class _TopRatedMoviesResult implements TopRatedMoviesResult {
+  const factory _TopRatedMoviesResult(
+          {required int id,
+          @JsonKey(name: "poster_path") required String posterPath}) =
+      _$_TopRatedMoviesResult;
 
-  factory _Results.fromJson(Map<String, dynamic> json) = _$_Results.fromJson;
+  factory _TopRatedMoviesResult.fromJson(Map<String, dynamic> json) =
+      _$_TopRatedMoviesResult.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
@@ -319,55 +329,56 @@ abstract class _Results implements Results {
   String get posterPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ResultsCopyWith<_Results> get copyWith =>
+  _$TopRatedMoviesResultCopyWith<_TopRatedMoviesResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Series _$SeriesFromJson(Map<String, dynamic> json) {
-  return _Series.fromJson(json);
+Trending _$TrendingFromJson(Map<String, dynamic> json) {
+  return _Trending.fromJson(json);
 }
 
 /// @nodoc
-class _$SeriesTearOff {
-  const _$SeriesTearOff();
+class _$TrendingTearOff {
+  const _$TrendingTearOff();
 
-  _Series call({required List<SeriesResult> result}) {
-    return _Series(
+  _Trending call({required List<TrendingResult> result}) {
+    return _Trending(
       result: result,
     );
   }
 
-  Series fromJson(Map<String, Object> json) {
-    return Series.fromJson(json);
+  Trending fromJson(Map<String, Object> json) {
+    return Trending.fromJson(json);
   }
 }
 
 /// @nodoc
-const $Series = _$SeriesTearOff();
+const $Trending = _$TrendingTearOff();
 
 /// @nodoc
-mixin _$Series {
-  List<SeriesResult> get result => throw _privateConstructorUsedError;
+mixin _$Trending {
+  List<TrendingResult> get result => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SeriesCopyWith<Series> get copyWith => throw _privateConstructorUsedError;
+  $TrendingCopyWith<Trending> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SeriesCopyWith<$Res> {
-  factory $SeriesCopyWith(Series value, $Res Function(Series) then) =
-      _$SeriesCopyWithImpl<$Res>;
-  $Res call({List<SeriesResult> result});
+abstract class $TrendingCopyWith<$Res> {
+  factory $TrendingCopyWith(Trending value, $Res Function(Trending) then) =
+      _$TrendingCopyWithImpl<$Res>;
+  $Res call({List<TrendingResult> result});
 }
 
 /// @nodoc
-class _$SeriesCopyWithImpl<$Res> implements $SeriesCopyWith<$Res> {
-  _$SeriesCopyWithImpl(this._value, this._then);
+class _$TrendingCopyWithImpl<$Res> implements $TrendingCopyWith<$Res> {
+  _$TrendingCopyWithImpl(this._value, this._then);
 
-  final Series _value;
+  final Trending _value;
   // ignore: unused_field
-  final $Res Function(Series) _then;
+  final $Res Function(Trending) _then;
 
   @override
   $Res call({
@@ -377,61 +388,61 @@ class _$SeriesCopyWithImpl<$Res> implements $SeriesCopyWith<$Res> {
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as List<SeriesResult>,
+              as List<TrendingResult>,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$SeriesCopyWith<$Res> implements $SeriesCopyWith<$Res> {
-  factory _$SeriesCopyWith(_Series value, $Res Function(_Series) then) =
-      __$SeriesCopyWithImpl<$Res>;
+abstract class _$TrendingCopyWith<$Res> implements $TrendingCopyWith<$Res> {
+  factory _$TrendingCopyWith(_Trending value, $Res Function(_Trending) then) =
+      __$TrendingCopyWithImpl<$Res>;
   @override
-  $Res call({List<SeriesResult> result});
+  $Res call({List<TrendingResult> result});
 }
 
 /// @nodoc
-class __$SeriesCopyWithImpl<$Res> extends _$SeriesCopyWithImpl<$Res>
-    implements _$SeriesCopyWith<$Res> {
-  __$SeriesCopyWithImpl(_Series _value, $Res Function(_Series) _then)
-      : super(_value, (v) => _then(v as _Series));
+class __$TrendingCopyWithImpl<$Res> extends _$TrendingCopyWithImpl<$Res>
+    implements _$TrendingCopyWith<$Res> {
+  __$TrendingCopyWithImpl(_Trending _value, $Res Function(_Trending) _then)
+      : super(_value, (v) => _then(v as _Trending));
 
   @override
-  _Series get _value => super._value as _Series;
+  _Trending get _value => super._value as _Trending;
 
   @override
   $Res call({
     Object? result = freezed,
   }) {
-    return _then(_Series(
+    return _then(_Trending(
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as List<SeriesResult>,
+              as List<TrendingResult>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Series implements _Series {
-  const _$_Series({required this.result});
+class _$_Trending implements _Trending {
+  const _$_Trending({required this.result});
 
-  factory _$_Series.fromJson(Map<String, dynamic> json) =>
-      _$_$_SeriesFromJson(json);
+  factory _$_Trending.fromJson(Map<String, dynamic> json) =>
+      _$_$_TrendingFromJson(json);
 
   @override
-  final List<SeriesResult> result;
+  final List<TrendingResult> result;
 
   @override
   String toString() {
-    return 'Series(result: $result)';
+    return 'Trending(result: $result)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Series &&
+        (other is _Trending &&
             (identical(other.result, result) ||
                 const DeepCollectionEquality().equals(other.result, result)));
   }
@@ -442,79 +453,81 @@ class _$_Series implements _Series {
 
   @JsonKey(ignore: true)
   @override
-  _$SeriesCopyWith<_Series> get copyWith =>
-      __$SeriesCopyWithImpl<_Series>(this, _$identity);
+  _$TrendingCopyWith<_Trending> get copyWith =>
+      __$TrendingCopyWithImpl<_Trending>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SeriesToJson(this);
+    return _$_$_TrendingToJson(this);
   }
 }
 
-abstract class _Series implements Series {
-  const factory _Series({required List<SeriesResult> result}) = _$_Series;
+abstract class _Trending implements Trending {
+  const factory _Trending({required List<TrendingResult> result}) = _$_Trending;
 
-  factory _Series.fromJson(Map<String, dynamic> json) = _$_Series.fromJson;
+  factory _Trending.fromJson(Map<String, dynamic> json) = _$_Trending.fromJson;
 
   @override
-  List<SeriesResult> get result => throw _privateConstructorUsedError;
+  List<TrendingResult> get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SeriesCopyWith<_Series> get copyWith => throw _privateConstructorUsedError;
+  _$TrendingCopyWith<_Trending> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-SeriesResult _$SeriesResultFromJson(Map<String, dynamic> json) {
-  return _SeriesResult.fromJson(json);
+TrendingResult _$TrendingResultFromJson(Map<String, dynamic> json) {
+  return _TrendingResult.fromJson(json);
 }
 
 /// @nodoc
-class _$SeriesResultTearOff {
-  const _$SeriesResultTearOff();
+class _$TrendingResultTearOff {
+  const _$TrendingResultTearOff();
 
-  _SeriesResult call(
+  _TrendingResult call(
       {required int id,
       @JsonKey(name: "poster_path") required String posterPath}) {
-    return _SeriesResult(
+    return _TrendingResult(
       id: id,
       posterPath: posterPath,
     );
   }
 
-  SeriesResult fromJson(Map<String, Object> json) {
-    return SeriesResult.fromJson(json);
+  TrendingResult fromJson(Map<String, Object> json) {
+    return TrendingResult.fromJson(json);
   }
 }
 
 /// @nodoc
-const $SeriesResult = _$SeriesResultTearOff();
+const $TrendingResult = _$TrendingResultTearOff();
 
 /// @nodoc
-mixin _$SeriesResult {
+mixin _$TrendingResult {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: "poster_path")
   String get posterPath => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SeriesResultCopyWith<SeriesResult> get copyWith =>
+  $TrendingResultCopyWith<TrendingResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SeriesResultCopyWith<$Res> {
-  factory $SeriesResultCopyWith(
-          SeriesResult value, $Res Function(SeriesResult) then) =
-      _$SeriesResultCopyWithImpl<$Res>;
+abstract class $TrendingResultCopyWith<$Res> {
+  factory $TrendingResultCopyWith(
+          TrendingResult value, $Res Function(TrendingResult) then) =
+      _$TrendingResultCopyWithImpl<$Res>;
   $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
-class _$SeriesResultCopyWithImpl<$Res> implements $SeriesResultCopyWith<$Res> {
-  _$SeriesResultCopyWithImpl(this._value, this._then);
+class _$TrendingResultCopyWithImpl<$Res>
+    implements $TrendingResultCopyWith<$Res> {
+  _$TrendingResultCopyWithImpl(this._value, this._then);
 
-  final SeriesResult _value;
+  final TrendingResult _value;
   // ignore: unused_field
-  final $Res Function(SeriesResult) _then;
+  final $Res Function(TrendingResult) _then;
 
   @override
   $Res call({
@@ -535,31 +548,32 @@ class _$SeriesResultCopyWithImpl<$Res> implements $SeriesResultCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SeriesResultCopyWith<$Res>
-    implements $SeriesResultCopyWith<$Res> {
-  factory _$SeriesResultCopyWith(
-          _SeriesResult value, $Res Function(_SeriesResult) then) =
-      __$SeriesResultCopyWithImpl<$Res>;
+abstract class _$TrendingResultCopyWith<$Res>
+    implements $TrendingResultCopyWith<$Res> {
+  factory _$TrendingResultCopyWith(
+          _TrendingResult value, $Res Function(_TrendingResult) then) =
+      __$TrendingResultCopyWithImpl<$Res>;
   @override
   $Res call({int id, @JsonKey(name: "poster_path") String posterPath});
 }
 
 /// @nodoc
-class __$SeriesResultCopyWithImpl<$Res> extends _$SeriesResultCopyWithImpl<$Res>
-    implements _$SeriesResultCopyWith<$Res> {
-  __$SeriesResultCopyWithImpl(
-      _SeriesResult _value, $Res Function(_SeriesResult) _then)
-      : super(_value, (v) => _then(v as _SeriesResult));
+class __$TrendingResultCopyWithImpl<$Res>
+    extends _$TrendingResultCopyWithImpl<$Res>
+    implements _$TrendingResultCopyWith<$Res> {
+  __$TrendingResultCopyWithImpl(
+      _TrendingResult _value, $Res Function(_TrendingResult) _then)
+      : super(_value, (v) => _then(v as _TrendingResult));
 
   @override
-  _SeriesResult get _value => super._value as _SeriesResult;
+  _TrendingResult get _value => super._value as _TrendingResult;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? posterPath = freezed,
   }) {
-    return _then(_SeriesResult(
+    return _then(_TrendingResult(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -574,13 +588,13 @@ class __$SeriesResultCopyWithImpl<$Res> extends _$SeriesResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SeriesResult implements _SeriesResult {
-  const _$_SeriesResult(
+class _$_TrendingResult implements _TrendingResult {
+  const _$_TrendingResult(
       {required this.id,
       @JsonKey(name: "poster_path") required this.posterPath});
 
-  factory _$_SeriesResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_SeriesResultFromJson(json);
+  factory _$_TrendingResult.fromJson(Map<String, dynamic> json) =>
+      _$_$_TrendingResultFromJson(json);
 
   @override
   final int id;
@@ -590,13 +604,13 @@ class _$_SeriesResult implements _SeriesResult {
 
   @override
   String toString() {
-    return 'SeriesResult(id: $id, posterPath: $posterPath)';
+    return 'TrendingResult(id: $id, posterPath: $posterPath)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SeriesResult &&
+        (other is _TrendingResult &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.posterPath, posterPath) ||
@@ -612,23 +626,23 @@ class _$_SeriesResult implements _SeriesResult {
 
   @JsonKey(ignore: true)
   @override
-  _$SeriesResultCopyWith<_SeriesResult> get copyWith =>
-      __$SeriesResultCopyWithImpl<_SeriesResult>(this, _$identity);
+  _$TrendingResultCopyWith<_TrendingResult> get copyWith =>
+      __$TrendingResultCopyWithImpl<_TrendingResult>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SeriesResultToJson(this);
+    return _$_$_TrendingResultToJson(this);
   }
 }
 
-abstract class _SeriesResult implements SeriesResult {
-  const factory _SeriesResult(
+abstract class _TrendingResult implements TrendingResult {
+  const factory _TrendingResult(
           {required int id,
           @JsonKey(name: "poster_path") required String posterPath}) =
-      _$_SeriesResult;
+      _$_TrendingResult;
 
-  factory _SeriesResult.fromJson(Map<String, dynamic> json) =
-      _$_SeriesResult.fromJson;
+  factory _TrendingResult.fromJson(Map<String, dynamic> json) =
+      _$_TrendingResult.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
@@ -637,6 +651,6 @@ abstract class _SeriesResult implements SeriesResult {
   String get posterPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SeriesResultCopyWith<_SeriesResult> get copyWith =>
+  _$TrendingResultCopyWith<_TrendingResult> get copyWith =>
       throw _privateConstructorUsedError;
 }

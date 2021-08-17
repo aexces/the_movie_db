@@ -6,37 +6,38 @@ part 'home.g.dart';
 @freezed
 class Home with _$Home {
   const factory Home({
-    required List<Results> results,
+    required List<TopRatedMoviesResult> result,
   }) = _Home;
   factory Home.fromJson(Map<String, dynamic> json) => _$HomeFromJson(json);
 }
 
 @freezed
-class Results with _$Results {
-  const factory Results({
+class TopRatedMoviesResult with _$TopRatedMoviesResult {
+  const factory TopRatedMoviesResult({
     required int id,
     @JsonKey(name: "poster_path") required String posterPath,
-  }) = _Results;
-  factory Results.fromJson(Map<String, dynamic> json) =>
-      _$ResultsFromJson(json);
+  }) = _TopRatedMoviesResult;
+  factory TopRatedMoviesResult.fromJson(Map<String, dynamic> json) =>
+      _$TopRatedMoviesResultFromJson(json);
 }
 
 @freezed
-class Series with _$Series {
-  const factory Series({
-    required List<SeriesResult> result,
-  }) = _Series;
+class Trending with _$Trending {
+  const factory Trending({
+    required List<TrendingResult> result,
+  }) = _Trending;
 
-  factory Series.fromJson(Map<String, dynamic> json) => _$SeriesFromJson(json);
+  factory Trending.fromJson(Map<String, dynamic> json) =>
+      _$TrendingFromJson(json);
 }
 
 @freezed
-class SeriesResult with _$SeriesResult {
-  const factory SeriesResult({
+class TrendingResult with _$TrendingResult {
+  const factory TrendingResult({
     required int id,
     @JsonKey(name: "poster_path") required String posterPath,
-  }) = _SeriesResult;
+  }) = _TrendingResult;
 
-  factory SeriesResult.fromJson(Map<String, dynamic> json) =>
-      _$SeriesResultFromJson(json);
+  factory TrendingResult.fromJson(Map<String, dynamic> json) =>
+      _$TrendingResultFromJson(json);
 }

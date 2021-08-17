@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:the_movie_db/application/home/home_bloc.dart';
 import 'package:the_movie_db/presentation/pages/home/widgets/constant_widgets.dart';
-import 'package:the_movie_db/presentation/pages/home/widgets/movie_poster.dart';
+import 'package:the_movie_db/presentation/pages/home/widgets/top_rated_movies_poster.dart';
 import 'package:the_movie_db/presentation/pages/home/widgets/section_heading.dart';
-import 'package:the_movie_db/presentation/pages/home/widgets/series_poster.dart';
+import 'package:the_movie_db/presentation/pages/home/widgets/trending_movies_poster.dart';
 import 'package:the_movie_db/presentation/widgets/constant_widgets.dart';
 import 'package:the_movie_db/presentation/widgets/thdb_heading.dart';
 
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return BlocConsumer<HomeBloc, HomeState>(
       listener: (context, state) {
-        if (state.results!.isEmpty) {
+        if (state.topRatedResult!.isEmpty) {
           context.read<HomeBloc>().add(
                 const HomeEvent.getSeries(),
               );
@@ -72,33 +72,34 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         kHeight,
-                        const SectionHeading(title: 'Trending'),
+                        const SectionHeading(title: 'Top rated movies'),
                         kHeight,
                         LimitedBox(
                           maxHeight: 185,
                           child: ListView.builder(
-                            itemCount: state.results!.length,
+                            itemCount: state.topRatedResult!.length,
                             scrollDirection: Axis.horizontal,
                             padding: const EdgeInsets.symmetric(horizontal: 5),
                             itemBuilder: (BuildContext context, int index) {
-                              return MoviePoster(
-                                results: state.results![index],
+                              return TopRatedMoviesPoster(
+                                topRatedMoviesResult:
+                                    state.topRatedResult![index],
                               );
                             },
                           ),
                         ),
                         kHeight,
-                        const SectionHeading(title: 'Movies'),
+                        const SectionHeading(title: 'Trending movies'),
                         kHeight,
                         LimitedBox(
                           maxHeight: 185,
                           child: ListView.builder(
-                            itemCount: state.results!.length,
+                            itemCount: state.trendingResult!.length,
                             scrollDirection: Axis.horizontal,
                             padding: const EdgeInsets.symmetric(horizontal: 5),
                             itemBuilder: (BuildContext context, int index) {
-                              return SeriesPoster(
-                                seriesResult: state.seriesResult![index],
+                              return TrendingMoviesPoster(
+                                trendingResult: state.trendingResult![index],
                               );
                             },
                           ),

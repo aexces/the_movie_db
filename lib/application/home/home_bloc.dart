@@ -25,8 +25,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     yield* event.map(
       getAllHomeData: (e) async* {
         yield state.copyWith(isLoading: true);
-        final Either<HomeFailure, List<Results>> homeOption =
-            await repository.getAllHomeDatas();
+        final Either<HomeFailure, List<TopRatedMoviesResult>> homeOption =
+            await repository.getTopRatedMovies();
         yield homeOption.fold(
           (l) => state.copyWith(
             isLoading: false,
@@ -36,7 +36,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
           (r) => state.copyWith(
             isLoading: false,
-            results: r,
+            topRatedResult: r,
             homeOption: Some(
               Right(r),
             ),
@@ -45,8 +45,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       },
       getSeries: (e) async* {
         yield state.copyWith(isLoading: true);
-        final Either<HomeFailure, List<SeriesResult>> homeOption =
-            await repository.getSeries();
+        final Either<HomeFailure, List<TrendingResult>> homeOption =
+            await repository.getTrendingMovies();
         yield homeOption.fold(
           (l) => state.copyWith(
             isLoading: false,
@@ -56,7 +56,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
           (r) => state.copyWith(
             isLoading: false,
-            seriesResult: r,
+            trendingResult: r,
             homeOption: Some(
               Right(r),
             ),
