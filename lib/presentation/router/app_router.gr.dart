@@ -4,57 +4,57 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:auto_route/auto_route.dart' as _i1;
-import 'package:flutter/material.dart' as _i2;
+import 'package:auto_route/auto_route.dart' as _i4;
+import 'package:flutter/material.dart' as _i5;
 
-import '../pages/home/home_page.dart' as _i5;
-import '../pages/main/main_page.dart' as _i4;
-import '../pages/splash/splash_page.dart' as _i3;
+import '../pages/home/home_page.dart' as _i3;
+import '../pages/main/main_page.dart' as _i2;
+import '../pages/splash/splash_page.dart' as _i1;
 
-class AppRouter extends _i1.RootStackRouter {
-  AppRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
+class AppRouter extends _i4.RootStackRouter {
+  AppRouter([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i1.PageFactory> pagesMap = {
-    SplashRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
-        routeData: routeData,
-        builder: (_) {
-          return const _i3.SplashPage();
-        }),
-    MainRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
-        routeData: routeData,
-        builder: (_) {
-          return const _i4.MainPage();
-        }),
-    HomeRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
-        routeData: routeData,
-        builder: (_) {
-          return const _i5.HomePage();
-        })
+  final Map<String, _i4.PageFactory> pagesMap = {
+    SplashRoute.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.SplashPage());
+    },
+    MainRoute.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i2.MainPage());
+    },
+    HomeRoute.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i3.HomePage());
+    }
   };
 
   @override
-  List<_i1.RouteConfig> get routes => [
-        _i1.RouteConfig(SplashRoute.name, path: '/'),
-        _i1.RouteConfig(MainRoute.name, path: '/main-page'),
-        _i1.RouteConfig(HomeRoute.name, path: '/home-page')
+  List<_i4.RouteConfig> get routes => [
+        _i4.RouteConfig(SplashRoute.name, path: '/'),
+        _i4.RouteConfig(MainRoute.name, path: '/main-page'),
+        _i4.RouteConfig(HomeRoute.name, path: '/home-page')
       ];
 }
 
-class SplashRoute extends _i1.PageRouteInfo {
+/// generated route for [_i1.SplashPage]
+class SplashRoute extends _i4.PageRouteInfo<void> {
   const SplashRoute() : super(name, path: '/');
 
   static const String name = 'SplashRoute';
 }
 
-class MainRoute extends _i1.PageRouteInfo {
+/// generated route for [_i2.MainPage]
+class MainRoute extends _i4.PageRouteInfo<void> {
   const MainRoute() : super(name, path: '/main-page');
 
   static const String name = 'MainRoute';
 }
 
-class HomeRoute extends _i1.PageRouteInfo {
+/// generated route for [_i3.HomePage]
+class HomeRoute extends _i4.PageRouteInfo<void> {
   const HomeRoute() : super(name, path: '/home-page');
 
   static const String name = 'HomeRoute';

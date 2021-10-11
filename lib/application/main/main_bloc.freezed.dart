@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'main_bloc.dart';
 
@@ -42,6 +43,13 @@ mixin _$MainEvent {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? homeEvent,
+    TResult Function()? searchEvent,
+    TResult Function()? categoryEvent,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? homeEvent,
     TResult Function()? searchEvent,
@@ -54,6 +62,13 @@ mixin _$MainEvent {
     required TResult Function(HomeEvent value) homeEvent,
     required TResult Function(SearchEvent value) searchEvent,
     required TResult Function(CategoryEvent value) categoryEvent,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeEvent value)? homeEvent,
+    TResult Function(SearchEvent value)? searchEvent,
+    TResult Function(CategoryEvent value)? categoryEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,7 +124,8 @@ class _$HomeEvent implements HomeEvent {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is HomeEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is HomeEvent);
   }
 
   @override
@@ -123,6 +139,16 @@ class _$HomeEvent implements HomeEvent {
     required TResult Function() categoryEvent,
   }) {
     return homeEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? homeEvent,
+    TResult Function()? searchEvent,
+    TResult Function()? categoryEvent,
+  }) {
+    return homeEvent?.call();
   }
 
   @override
@@ -147,6 +173,16 @@ class _$HomeEvent implements HomeEvent {
     required TResult Function(CategoryEvent value) categoryEvent,
   }) {
     return homeEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeEvent value)? homeEvent,
+    TResult Function(SearchEvent value)? searchEvent,
+    TResult Function(CategoryEvent value)? categoryEvent,
+  }) {
+    return homeEvent?.call(this);
   }
 
   @override
@@ -198,7 +234,8 @@ class _$SearchEvent implements SearchEvent {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SearchEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SearchEvent);
   }
 
   @override
@@ -212,6 +249,16 @@ class _$SearchEvent implements SearchEvent {
     required TResult Function() categoryEvent,
   }) {
     return searchEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? homeEvent,
+    TResult Function()? searchEvent,
+    TResult Function()? categoryEvent,
+  }) {
+    return searchEvent?.call();
   }
 
   @override
@@ -236,6 +283,16 @@ class _$SearchEvent implements SearchEvent {
     required TResult Function(CategoryEvent value) categoryEvent,
   }) {
     return searchEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeEvent value)? homeEvent,
+    TResult Function(SearchEvent value)? searchEvent,
+    TResult Function(CategoryEvent value)? categoryEvent,
+  }) {
+    return searchEvent?.call(this);
   }
 
   @override
@@ -287,7 +344,8 @@ class _$CategoryEvent implements CategoryEvent {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CategoryEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CategoryEvent);
   }
 
   @override
@@ -301,6 +359,16 @@ class _$CategoryEvent implements CategoryEvent {
     required TResult Function() categoryEvent,
   }) {
     return categoryEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? homeEvent,
+    TResult Function()? searchEvent,
+    TResult Function()? categoryEvent,
+  }) {
+    return categoryEvent?.call();
   }
 
   @override
@@ -325,6 +393,16 @@ class _$CategoryEvent implements CategoryEvent {
     required TResult Function(CategoryEvent value) categoryEvent,
   }) {
     return categoryEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeEvent value)? homeEvent,
+    TResult Function(SearchEvent value)? searchEvent,
+    TResult Function(CategoryEvent value)? categoryEvent,
+  }) {
+    return categoryEvent?.call(this);
   }
 
   @override
@@ -443,15 +521,14 @@ class _$_Home implements _Home {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Home &&
+        (other.runtimeType == runtimeType &&
+            other is _Home &&
             (identical(other.currentIndex, currentIndex) ||
-                const DeepCollectionEquality()
-                    .equals(other.currentIndex, currentIndex)));
+                other.currentIndex == currentIndex));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(currentIndex);
+  int get hashCode => Object.hash(runtimeType, currentIndex);
 
   @JsonKey(ignore: true)
   @override
@@ -463,7 +540,7 @@ abstract class _Home implements MainState {
   const factory _Home({required int currentIndex}) = _$_Home;
 
   @override
-  int get currentIndex => throw _privateConstructorUsedError;
+  int get currentIndex;
   @override
   @JsonKey(ignore: true)
   _$HomeCopyWith<_Home> get copyWith => throw _privateConstructorUsedError;

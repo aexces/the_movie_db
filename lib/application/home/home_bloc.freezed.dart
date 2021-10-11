@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'home_bloc.dart';
 
@@ -37,6 +38,12 @@ mixin _$HomeEvent {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllHomeData,
     TResult Function()? getSeries,
@@ -47,6 +54,12 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(GetAllHomeData value) getAllHomeData,
     required TResult Function(GetSeries value) getSeries,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -103,7 +116,8 @@ class _$GetAllHomeData implements GetAllHomeData {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is GetAllHomeData);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is GetAllHomeData);
   }
 
   @override
@@ -116,6 +130,15 @@ class _$GetAllHomeData implements GetAllHomeData {
     required TResult Function() getSeries,
   }) {
     return getAllHomeData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
+  }) {
+    return getAllHomeData?.call();
   }
 
   @override
@@ -138,6 +161,15 @@ class _$GetAllHomeData implements GetAllHomeData {
     required TResult Function(GetSeries value) getSeries,
   }) {
     return getAllHomeData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
+  }) {
+    return getAllHomeData?.call(this);
   }
 
   @override
@@ -186,7 +218,8 @@ class _$GetSeries implements GetSeries {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is GetSeries);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is GetSeries);
   }
 
   @override
@@ -199,6 +232,15 @@ class _$GetSeries implements GetSeries {
     required TResult Function() getSeries,
   }) {
     return getSeries();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? getAllHomeData,
+    TResult Function()? getSeries,
+  }) {
+    return getSeries?.call();
   }
 
   @override
@@ -221,6 +263,15 @@ class _$GetSeries implements GetSeries {
     required TResult Function(GetSeries value) getSeries,
   }) {
     return getSeries(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(GetAllHomeData value)? getAllHomeData,
+    TResult Function(GetSeries value)? getSeries,
+  }) {
+    return getSeries?.call(this);
   }
 
   @override
@@ -399,28 +450,25 @@ class _$_Initial implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Initial &&
-            (identical(other.topRatedResult, topRatedResult) ||
-                const DeepCollectionEquality()
-                    .equals(other.topRatedResult, topRatedResult)) &&
-            (identical(other.trendingResult, trendingResult) ||
-                const DeepCollectionEquality()
-                    .equals(other.trendingResult, trendingResult)) &&
+        (other.runtimeType == runtimeType &&
+            other is _Initial &&
+            const DeepCollectionEquality()
+                .equals(other.topRatedResult, topRatedResult) &&
+            const DeepCollectionEquality()
+                .equals(other.trendingResult, trendingResult) &&
             (identical(other.homeOption, homeOption) ||
-                const DeepCollectionEquality()
-                    .equals(other.homeOption, homeOption)) &&
+                other.homeOption == homeOption) &&
             (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)));
+                other.isLoading == isLoading));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(topRatedResult) ^
-      const DeepCollectionEquality().hash(trendingResult) ^
-      const DeepCollectionEquality().hash(homeOption) ^
-      const DeepCollectionEquality().hash(isLoading);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(topRatedResult),
+      const DeepCollectionEquality().hash(trendingResult),
+      homeOption,
+      isLoading);
 
   @JsonKey(ignore: true)
   @override
@@ -436,16 +484,13 @@ abstract class _Initial implements HomeState {
       bool? isLoading}) = _$_Initial;
 
   @override
-  List<TopRatedMoviesResult>? get topRatedResult =>
-      throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult>? get topRatedResult;
   @override
-  List<TrendingResult>? get trendingResult =>
-      throw _privateConstructorUsedError;
+  List<TrendingResult>? get trendingResult;
   @override
-  Option<Either<HomeFailure, List>> get homeOption =>
-      throw _privateConstructorUsedError;
+  Option<Either<HomeFailure, List>> get homeOption;
   @override
-  bool? get isLoading => throw _privateConstructorUsedError;
+  bool? get isLoading;
   @override
   @JsonKey(ignore: true)
   _$InitialCopyWith<_Initial> get copyWith =>

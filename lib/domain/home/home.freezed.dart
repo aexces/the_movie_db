@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'home.dart';
 
@@ -26,7 +27,7 @@ class _$HomeTearOff {
     );
   }
 
-  Home fromJson(Map<String, Object> json) {
+  Home fromJson(Map<String, Object?> json) {
     return Home.fromJson(json);
   }
 }
@@ -106,8 +107,7 @@ class __$HomeCopyWithImpl<$Res> extends _$HomeCopyWithImpl<$Res>
 class _$_Home implements _Home {
   const _$_Home({required this.result});
 
-  factory _$_Home.fromJson(Map<String, dynamic> json) =>
-      _$_$_HomeFromJson(json);
+  factory _$_Home.fromJson(Map<String, dynamic> json) => _$$_HomeFromJson(json);
 
   @override
   final List<TopRatedMoviesResult> result;
@@ -120,14 +120,14 @@ class _$_Home implements _Home {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Home &&
-            (identical(other.result, result) ||
-                const DeepCollectionEquality().equals(other.result, result)));
+        (other.runtimeType == runtimeType &&
+            other is _Home &&
+            const DeepCollectionEquality().equals(other.result, result));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(result));
 
   @JsonKey(ignore: true)
   @override
@@ -136,7 +136,7 @@ class _$_Home implements _Home {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HomeToJson(this);
+    return _$$_HomeToJson(this);
   }
 }
 
@@ -146,7 +146,7 @@ abstract class _Home implements Home {
   factory _Home.fromJson(Map<String, dynamic> json) = _$_Home.fromJson;
 
   @override
-  List<TopRatedMoviesResult> get result => throw _privateConstructorUsedError;
+  List<TopRatedMoviesResult> get result;
   @override
   @JsonKey(ignore: true)
   _$HomeCopyWith<_Home> get copyWith => throw _privateConstructorUsedError;
@@ -169,7 +169,7 @@ class _$TopRatedMoviesResultTearOff {
     );
   }
 
-  TopRatedMoviesResult fromJson(Map<String, Object> json) {
+  TopRatedMoviesResult fromJson(Map<String, Object?> json) {
     return TopRatedMoviesResult.fromJson(json);
   }
 }
@@ -271,7 +271,7 @@ class _$_TopRatedMoviesResult implements _TopRatedMoviesResult {
       @JsonKey(name: "poster_path") required this.posterPath});
 
   factory _$_TopRatedMoviesResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_TopRatedMoviesResultFromJson(json);
+      _$$_TopRatedMoviesResultFromJson(json);
 
   @override
   final int id;
@@ -287,19 +287,15 @@ class _$_TopRatedMoviesResult implements _TopRatedMoviesResult {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TopRatedMoviesResult &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _TopRatedMoviesResult &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.posterPath, posterPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.posterPath, posterPath)));
+                other.posterPath == posterPath));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(posterPath);
+  int get hashCode => Object.hash(runtimeType, id, posterPath);
 
   @JsonKey(ignore: true)
   @override
@@ -309,7 +305,7 @@ class _$_TopRatedMoviesResult implements _TopRatedMoviesResult {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TopRatedMoviesResultToJson(this);
+    return _$$_TopRatedMoviesResultToJson(this);
   }
 }
 
@@ -323,10 +319,10 @@ abstract class _TopRatedMoviesResult implements TopRatedMoviesResult {
       _$_TopRatedMoviesResult.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
   @JsonKey(name: "poster_path")
-  String get posterPath => throw _privateConstructorUsedError;
+  String get posterPath;
   @override
   @JsonKey(ignore: true)
   _$TopRatedMoviesResultCopyWith<_TopRatedMoviesResult> get copyWith =>
@@ -347,7 +343,7 @@ class _$TrendingTearOff {
     );
   }
 
-  Trending fromJson(Map<String, Object> json) {
+  Trending fromJson(Map<String, Object?> json) {
     return Trending.fromJson(json);
   }
 }
@@ -429,7 +425,7 @@ class _$_Trending implements _Trending {
   const _$_Trending({required this.result});
 
   factory _$_Trending.fromJson(Map<String, dynamic> json) =>
-      _$_$_TrendingFromJson(json);
+      _$$_TrendingFromJson(json);
 
   @override
   final List<TrendingResult> result;
@@ -442,14 +438,14 @@ class _$_Trending implements _Trending {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Trending &&
-            (identical(other.result, result) ||
-                const DeepCollectionEquality().equals(other.result, result)));
+        (other.runtimeType == runtimeType &&
+            other is _Trending &&
+            const DeepCollectionEquality().equals(other.result, result));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(result));
 
   @JsonKey(ignore: true)
   @override
@@ -458,7 +454,7 @@ class _$_Trending implements _Trending {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TrendingToJson(this);
+    return _$$_TrendingToJson(this);
   }
 }
 
@@ -468,7 +464,7 @@ abstract class _Trending implements Trending {
   factory _Trending.fromJson(Map<String, dynamic> json) = _$_Trending.fromJson;
 
   @override
-  List<TrendingResult> get result => throw _privateConstructorUsedError;
+  List<TrendingResult> get result;
   @override
   @JsonKey(ignore: true)
   _$TrendingCopyWith<_Trending> get copyWith =>
@@ -492,7 +488,7 @@ class _$TrendingResultTearOff {
     );
   }
 
-  TrendingResult fromJson(Map<String, Object> json) {
+  TrendingResult fromJson(Map<String, Object?> json) {
     return TrendingResult.fromJson(json);
   }
 }
@@ -594,7 +590,7 @@ class _$_TrendingResult implements _TrendingResult {
       @JsonKey(name: "poster_path") required this.posterPath});
 
   factory _$_TrendingResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_TrendingResultFromJson(json);
+      _$$_TrendingResultFromJson(json);
 
   @override
   final int id;
@@ -610,19 +606,15 @@ class _$_TrendingResult implements _TrendingResult {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TrendingResult &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _TrendingResult &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.posterPath, posterPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.posterPath, posterPath)));
+                other.posterPath == posterPath));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(posterPath);
+  int get hashCode => Object.hash(runtimeType, id, posterPath);
 
   @JsonKey(ignore: true)
   @override
@@ -631,7 +623,7 @@ class _$_TrendingResult implements _TrendingResult {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TrendingResultToJson(this);
+    return _$$_TrendingResultToJson(this);
   }
 }
 
@@ -645,10 +637,10 @@ abstract class _TrendingResult implements TrendingResult {
       _$_TrendingResult.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
   @JsonKey(name: "poster_path")
-  String get posterPath => throw _privateConstructorUsedError;
+  String get posterPath;
   @override
   @JsonKey(ignore: true)
   _$TrendingResultCopyWith<_TrendingResult> get copyWith =>
