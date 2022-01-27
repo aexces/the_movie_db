@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'home.dart';
@@ -289,13 +290,16 @@ class _$_TopRatedMoviesResult implements _TopRatedMoviesResult {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TopRatedMoviesResult &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.posterPath, posterPath) ||
-                other.posterPath == posterPath));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.posterPath, posterPath));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, posterPath);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(posterPath));
 
   @JsonKey(ignore: true)
   @override
@@ -608,13 +612,16 @@ class _$_TrendingResult implements _TrendingResult {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TrendingResult &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.posterPath, posterPath) ||
-                other.posterPath == posterPath));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.posterPath, posterPath));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, posterPath);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(posterPath));
 
   @JsonKey(ignore: true)
   @override

@@ -1,8 +1,14 @@
+// **************************************************************************
+// AutoRouteGenerator
+// **************************************************************************
+
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
 // AutoRouteGenerator
 // **************************************************************************
+//
+// ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
@@ -39,23 +45,26 @@ class AppRouter extends _i4.RootStackRouter {
       ];
 }
 
-/// generated route for [_i1.SplashPage]
+/// generated route for
+/// [_i1.SplashPage]
 class SplashRoute extends _i4.PageRouteInfo<void> {
-  const SplashRoute() : super(name, path: '/');
+  const SplashRoute() : super(SplashRoute.name, path: '/');
 
   static const String name = 'SplashRoute';
 }
 
-/// generated route for [_i2.MainPage]
+/// generated route for
+/// [_i2.MainPage]
 class MainRoute extends _i4.PageRouteInfo<void> {
-  const MainRoute() : super(name, path: '/main-page');
+  const MainRoute() : super(MainRoute.name, path: '/main-page');
 
   static const String name = 'MainRoute';
 }
 
-/// generated route for [_i3.HomePage]
+/// generated route for
+/// [_i3.HomePage]
 class HomeRoute extends _i4.PageRouteInfo<void> {
-  const HomeRoute() : super(name, path: '/home-page');
+  const HomeRoute() : super(HomeRoute.name, path: '/home-page');
 
   static const String name = 'HomeRoute';
 }

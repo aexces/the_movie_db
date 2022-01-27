@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'home_bloc.dart';
@@ -456,10 +457,9 @@ class _$_Initial implements _Initial {
                 .equals(other.topRatedResult, topRatedResult) &&
             const DeepCollectionEquality()
                 .equals(other.trendingResult, trendingResult) &&
-            (identical(other.homeOption, homeOption) ||
-                other.homeOption == homeOption) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading));
+            const DeepCollectionEquality()
+                .equals(other.homeOption, homeOption) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading));
   }
 
   @override
@@ -467,8 +467,8 @@ class _$_Initial implements _Initial {
       runtimeType,
       const DeepCollectionEquality().hash(topRatedResult),
       const DeepCollectionEquality().hash(trendingResult),
-      homeOption,
-      isLoading);
+      const DeepCollectionEquality().hash(homeOption),
+      const DeepCollectionEquality().hash(isLoading));
 
   @JsonKey(ignore: true)
   @override
