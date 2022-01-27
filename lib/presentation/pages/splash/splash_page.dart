@@ -1,8 +1,9 @@
+// ignore: implementation_imports
 import 'package:auto_route/src/router/auto_router_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:the_movie_db/application/cubit/splash_cubit.dart';
+import 'package:the_movie_db/application/splash/splash_cubit.dart';
 import 'package:the_movie_db/core/colors.dart';
 import 'package:the_movie_db/core/constants.dart';
 import 'package:the_movie_db/presentation/router/app_router.gr.dart';
